@@ -4,7 +4,6 @@ import org.hibernate.Session;
 
 import UTN.TP4_GRUPO_15.dao.ConfigHibernate;
 import UTN.TP4_GRUPO_15.entidad.Especialidad;
-import UTN.TP4_GRUPO_15.entidad.Medico;
 
 public class especialidadController {
 
@@ -66,4 +65,5 @@ public class especialidadController {
 		return "Registro eliminado";
 		
 	}
+	
 }

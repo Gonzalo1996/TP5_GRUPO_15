@@ -31,7 +31,9 @@ public class App
     	System.out.println( "Opcion 1 - Altas" );
     	System.out.println( "Opcion 2 - Modificacion" );
     	System.out.println( "Opcion 3 - Borrado" );
-    	System.out.println( "Opcion 4 - Listar" );    	
+    	System.out.println( "Opcion 4 - Listar" );
+    	System.out.println( "-------------------------------------------------------" );
+    	System.out.println( "Opcion 7 - Punto 3 TP" );
     	System.out.println( "Seleccionar Opcion: " );
     	
     	int opcion = sc.nextInt();
@@ -78,16 +80,16 @@ public class App
 
 
     		//Creación de medicos
-    		Medico medico01 = new Medico("Gonzalo", "Alderete", "Masculino", "12/02/1996", "gonzalo@prueba.com", "falsa 111", "Pacheco", "11-12229", usuario1, especialidad1);
-    		Medico medico02 = new Medico("Gaston", "Argañaz", "Masculino", "01/06/1996", "gaston@prueba.com", "falsa 222", "Pacheco", "11-12229", usuario2, especialidad1);
-    		Medico medico03 = new Medico("Leonel", "Herrera", "Masculino", "30/12/2000", "leonel@prueba.com", "falsa 333", "Pacheco", "11-12229", usuario3, especialidad1);
-    		Medico medico04 = new Medico("Guido", "Romero", "Masculino", "11/02/2001", "guido@prueba.com", "falsa 444", "Pacheco", "11-12229", usuario4, especialidad2);
-    		Medico medico05 = new Medico("Walter", "Pizzo", "Masculino", "29/02/1998", "walter@prueba.com", "falsa 555", "Pacheco", "11-12229", usuario5, especialidad3);
-    		Medico medico06 = new Medico("Tamara", "Herrera", "Femenina", "14/05/2000", "tamara@prueba.com", "falsa 666", "Pacheco", "11-12229", usuario6, especialidad3);
-    		Medico medico07 = new Medico("Pepito", "Perez", "Masculino", "12/02/1996", "pepito@prueba.com", "falsa 777", "Pacheco", "11-12229", usuario7, especialidad2);
-    		Medico medico08 = new Medico("Pepita", "Perez", "Femenina", "04/04/1999", "pepita@prueba.com", "falsa 888", "Pacheco", "11-12229", usuario8, especialidad1);
-    		Medico medico09 = new Medico("Juan", "Diaz", "Masculino", "12/02/1996", "juan@prueba.com", "falsa 999", "Pacheco", "11-12229", usuario9, especialidad1);
-    		Medico medico10 = new Medico("Laura", "Morales", "Femenina", "02/12/2000", "laura@prueba.com", "falsa 321", "Pacheco", "11-12229", usuario10, especialidad3);
+    		Medico medico01 = new Medico(1234, "Gonzalo", "Alderete", "Masculino", "12/02/1996", "gonzalo@prueba.com", "falsa 111", "Pacheco", "11-12229", usuario1, especialidad1);
+    		Medico medico02 = new Medico(1111, "Gaston", "Argañaz", "Masculino", "01/06/1996", "gaston@prueba.com", "falsa 222", "Pacheco", "11-12229", usuario2, especialidad1);
+    		Medico medico03 = new Medico(2222, "Leonel", "Herrera", "Masculino", "30/12/2000", "leonel@prueba.com", "falsa 333", "Pacheco", "11-12229", usuario3, especialidad1);
+    		Medico medico04 = new Medico(3333, "Guido", "Romero", "Masculino", "11/02/2001", "guido@prueba.com", "falsa 444", "Pacheco", "11-12229", usuario4, especialidad2);
+    		Medico medico05 = new Medico(4444, "Walter", "Pizzo", "Masculino", "29/02/1998", "walter@prueba.com", "falsa 555", "Pacheco", "11-12229", usuario5, especialidad3);
+    		Medico medico06 = new Medico(5555, "Tamara", "Herrera", "Femenina", "14/05/2000", "tamara@prueba.com", "falsa 666", "Pacheco", "11-12229", usuario6, especialidad3);
+    		Medico medico07 = new Medico(6666, "Pepito", "Perez", "Masculino", "12/02/1996", "pepito@prueba.com", "falsa 777", "Pacheco", "11-12229", usuario7, especialidad2);
+    		Medico medico08 = new Medico(7777, "Pepita", "Perez", "Femenina", "04/04/1999", "pepita@prueba.com", "falsa 888", "Pacheco", "11-12229", usuario8, especialidad1);
+    		Medico medico09 = new Medico(8888, "Juan", "Diaz", "Masculino", "12/02/1996", "juan@prueba.com", "falsa 999", "Pacheco", "11-12229", usuario9, especialidad1);
+    		Medico medico10 = new Medico(9999, "Laura", "Morales", "Femenina", "02/12/2000", "laura@prueba.com", "falsa 321", "Pacheco", "11-12229", usuario10, especialidad3);
 
     		System.out.println(new medicoController().create(medico01));
     		System.out.println(new medicoController().create(medico02));
@@ -114,10 +116,10 @@ public class App
     		Paciente paciente10 = new Paciente("Sofía", "Álvarez", "147258369", "1472583690", "Av. 9 de Julio 666", "Otra Ciudad", "Otra Provincia", LocalDate.of(1993, 11, 30), "sofia@example.com");
 
     		// Creación de turnos
-    		Turno turno1 = new Turno(medico01, paciente1, LocalDate.of(2024, 10, 11), LocalTime.of(14, 0), "observación1", "pendiente");
-    		Turno turno2 = new Turno(medico02, paciente2, LocalDate.of(2024, 8, 11), LocalTime.of(14, 0), "observación2", "ausente");
-    		Turno turno3 = new Turno(medico03, paciente3, LocalDate.of(2024, 10, 12), LocalTime.of(14, 0), "observación3", "pendiente");
-    		Turno turno4 = new Turno(medico04, paciente4, LocalDate.of(2024, 8, 12), LocalTime.of(14, 0), "observación4", "pendiente");
+    		Turno turno1 = new Turno(medico01, paciente1, LocalDate.of(2025, 10, 11), LocalTime.of(14, 0), "observación1", "pendiente");
+    		Turno turno2 = new Turno(medico01, paciente2, LocalDate.of(2025, 01, 01), LocalTime.of(14, 0), "observación2", "ausente");
+    		Turno turno3 = new Turno(medico01, paciente3, LocalDate.of(2025, 8, 12), LocalTime.of(14, 0), "observación3", "pendiente");
+    		Turno turno4 = new Turno(medico01, paciente4, LocalDate.of(2025, 01, 01), LocalTime.of(14, 0), "observación4", "pendiente");
     		Turno turno5 = new Turno(medico05, paciente5, LocalDate.of(2024, 10, 13), LocalTime.of(14, 0), "observación5", "presente");
     		Turno turno6 = new Turno(medico06, paciente6, LocalDate.of(2024, 8, 13), LocalTime.of(14, 0), "observación6", "pendiente");
     		Turno turno7 = new Turno(medico07, paciente7, LocalDate.of(2024, 10, 14), LocalTime.of(14, 0), "observación7", "pendiente");
@@ -141,7 +143,7 @@ public class App
     	case 2:
     		Usuario usuario11 = new Usuario("Gonzalo", "123");
     		Especialidad especialidad4 = new Especialidad("Clinico");
-    		Medico medicoUpdate = new Medico("Gonzalo", "Alderete", "Masculino", "12/02/1996", "gonzalo@prueba.com", "falsa 111", "Pacheco", "11-12229", usuario11, especialidad4);
+    		Medico medicoUpdate = new Medico(1234, "Gonzalo", "Alderete", "Masculino", "12/02/1996", "gonzalo@prueba.com", "falsa 111", "Pacheco", "11-12229", usuario11, especialidad4);
     		medicoUpdate.setLegajo(1);
     		String updateMedcio = new medicoController().update(medicoUpdate);
     		
@@ -171,6 +173,12 @@ public class App
     		for (Medico medico : listMedicos) {
     		    System.out.println(medico);
     		}
+    		break;
+    		
+    	case 7:
+
+    			new turnoController().listTurnosInnerJoin();
+    		
     		break;
     	}
     }

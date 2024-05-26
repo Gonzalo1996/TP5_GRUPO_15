@@ -25,7 +25,7 @@ public class Medico implements Serializable{
 
 	@Id
 	@Column(name="legajo")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int legajo;
 	
 	@Column(name="nombre")
@@ -68,7 +68,7 @@ public class Medico implements Serializable{
 
 	}
 	
-	public Medico(String nombre, String apellido, String genero, String nac, String correo,
+	public Medico(int legajo, String nombre, String apellido, String genero, String nac, String correo,
 			String direccion, String localidad, String telefono, Usuario usuario, Especialidad especialidad) {
 		super();
 		this.legajo = legajo;
