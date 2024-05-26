@@ -42,7 +42,7 @@ public class App
     	switch(opcion){
     	
     	case 1:
-
+    		
     		//Creación de usuarios
     		Usuario usuario1 = new Usuario("UserGonzalo", "123");
     		Usuario usuario2 = new Usuario("UserGaston", "123");
@@ -151,8 +151,13 @@ public class App
     		
     		
     	case 3:
+    		/*
     		medicoController medicoDelete = new medicoController();
-    		medicoDelete.delete(10);
+    		medicoDelete.delete(9);
+    		*/
+    		
+    		especialidadController especialidad = new especialidadController();
+    		especialidad.delete(5);
     		
     		break;
     		
