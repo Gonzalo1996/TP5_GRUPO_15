@@ -18,7 +18,7 @@ import UTN.TP4_GRUPO_15.entidad.Turno;
 
 
 /**
- * Hello world!
+ * Hola Mundo!
  *
  */
 public class App 
