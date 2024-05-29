@@ -39,7 +39,7 @@ public class App
     	System.out.println( "Opcion 7 - Listar turnos del médico con legajo 1234" );
     	System.out.println( "Opcion 8 - Listar todos los legajos de los médicos" );
     	System.out.println( "Opcion 9 - Mostrar médico con mayor número de legajo" );
-    	System.out.println( "Opcion 10 - Mostrar porcentajes de estados presente y ausente entre 2023-01-01 - 2023-03-01" );
+    	System.out.println( "Opcion 10 - Mostrar porcentajes de estados presente y ausente entre 2024-01-01 - 2024-03-01" );
     	System.out.println( "Seleccionar Opcion: " );
     	
     	int opcion = sc.nextInt();
@@ -199,7 +199,7 @@ public class App
     		new medicoController().listMedicWithHighestId();
     		break;
     	case 10:
-        		new turnoController().listTurnStatusPercentages();
+        	new turnoController().listTurnStatusPercentages();
     		break;
     	}
     }
