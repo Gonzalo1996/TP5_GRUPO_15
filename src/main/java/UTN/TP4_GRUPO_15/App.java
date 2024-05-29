@@ -33,6 +33,8 @@ public class App
     	System.out.println( "Opcion 3 - Borrado" );
     	System.out.println( "Opcion 4 - Listar" );
     	System.out.println( "-------------------------------------------------------" );
+    	System.out.println( "Opcion 5 - Listar médicos de forma ascendente" );
+    	System.out.println( "Opcion 6 - Listar médicos de forma descendente" );
     	System.out.println( "Opcion 7 - Punto 3 TP" );
     	System.out.println( "Seleccionar Opcion: " );
     	
@@ -173,6 +175,14 @@ public class App
     		for (Medico medico : listMedicos) {
     		    System.out.println(medico);
     		}
+    		break;
+    		
+    	case 5:
+    		new medicoController().listMedicsAscending();
+    		break;
+    		
+    	case 6:
+    		new medicoController().listMedicsDescending();
     		break;
     		
     	case 7:

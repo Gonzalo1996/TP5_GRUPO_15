@@ -186,7 +186,8 @@ public class Medico implements Serializable{
 	public String toString() {
 		return "Legajo: " + legajo + ", Nombre: " + nombre + ", Apellido: " + apellido + ", Género: " + genero
 				+ ", Nacimiento: " + nac + ", Correo: " + correo + ", Direccion: " + direccion + ", Localidad: " + localidad
-				+ ", Telefono: " + telefono;
+				+ ", Telefono: " + telefono + ", Especialidad: " + especialidad.getNombre() + ", ID de Especialidad: " + especialidad.getId()
+				+ ", Usuario: " + usuario.getUsuario() + ", Contraseña: " + usuario.getContrasenia();
 	}
 	
 }

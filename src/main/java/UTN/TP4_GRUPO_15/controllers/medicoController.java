@@ -95,5 +95,29 @@ public class medicoController {
 		return "Registro eliminado";
 		
 	}
+	
+	public static void listMedicsAscending() {
+		System.out.println("Listando médicos por legajo de forma ascendente...\n");
+		ConfigHibernate ch = new ConfigHibernate(Medico.class);
+		Session session = ch.openSession();
+		session.beginTransaction();
+		List<Medico> lista = (List<Medico>) session.createQuery("FROM Medico m ORDER BY m.legajo ASC").list();
+		
+		for(Medico medico : lista) {
+			System.out.println(medico.toString() + "\n");
+		}
+	}
+	
+	public static void listMedicsDescending() {
+		System.out.println("Listando médicos por legajo de forma descendente...\n");
+		ConfigHibernate ch = new ConfigHibernate(Medico.class);
+		Session session = ch.openSession();
+		session.beginTransaction();
+		List<Object[]> lista = (List<Object[]>) session.createQuery("SELECT m.legajo, m.nombre, m.apellido FROM Medico m ORDER BY m.legajo DESC").list();
+		
+		for(Object[] obj : lista) {
+			System.out.println("Legajo: "+ obj[0] + "Nombre: " + obj[1] + "Apellido: " + obj[2] + "\n");
+		}
+	}
 
 }
