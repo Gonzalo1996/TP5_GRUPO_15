@@ -118,6 +118,18 @@ public class medicoController {
 		for(Object[] obj : lista) {
 			System.out.println("Legajo: "+ obj[0] + ", Nombre: " + obj[1] + ", Apellido: " + obj[2] + "\n");
 		}
+		
 	}
-
+	
+	public static void listMedicsIds() {
+		System.out.println("Listando el legajo de todos los médicos...\n");
+		ConfigHibernate ch = new ConfigHibernate(Medico.class);
+		Session session = ch.openSession();
+		session.beginTransaction();
+		List<Integer> lista = (List<Integer>) session.createQuery("SELECT m.legajo FROM Medico m").list();
+		
+		for(Integer legajo : lista) {
+			System.out.println("Legajo: "+ legajo + "\n");
+		}
+	}
 }
