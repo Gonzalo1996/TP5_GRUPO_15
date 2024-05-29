@@ -116,7 +116,7 @@ public class medicoController {
 		List<Object[]> lista = (List<Object[]>) session.createQuery("SELECT m.legajo, m.nombre, m.apellido FROM Medico m ORDER BY m.legajo DESC").list();
 		
 		for(Object[] obj : lista) {
-			System.out.println("Legajo: "+ obj[0] + "Nombre: " + obj[1] + "Apellido: " + obj[2] + "\n");
+			System.out.println("Legajo: "+ obj[0] + ", Nombre: " + obj[1] + ", Apellido: " + obj[2] + "\n");
 		}
 	}
 
