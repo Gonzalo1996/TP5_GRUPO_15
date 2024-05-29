@@ -132,4 +132,14 @@ public class medicoController {
 			System.out.println("Legajo: "+ legajo + "\n");
 		}
 	}
+	
+	public static void listMedicWithHighestId() {
+		System.out.println("Listando el médico con el mayor número de legajo...\n");
+		ConfigHibernate ch = new ConfigHibernate(Medico.class);
+		Session session = ch.openSession();
+		session.beginTransaction();
+		Medico medico = (Medico) session.createQuery("FROM Medico m ORDER BY m.legajo DESC").setMaxResults(1).uniqueResult();
+		
+		System.out.println(medico.toString());
+	}
 }

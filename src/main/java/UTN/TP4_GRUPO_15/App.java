@@ -37,6 +37,8 @@ public class App
     	System.out.println( "Opcion 6 - Listar médicos de forma descendente" );
     	System.out.println( "Opcion 7 - Listar turnos del médico con legajo 1234" );
     	System.out.println( "Opcion 8 - Listar todos los legajos de los médicos" );
+    	System.out.println( "Opcion 9 - Mostrar médico con mayor número de legajo" );
+    	System.out.println( "Opcion 8 - Listar todos los legajos de los médicos" );
     	System.out.println( "Seleccionar Opcion: " );
     	
     	int opcion = sc.nextInt();
@@ -191,6 +193,9 @@ public class App
     		break;
     	case 8:
     		new medicoController().listMedicsIds();
+    		break;
+    	case 9:
+    		new medicoController().listMedicWithHighestId();
     		break;
     	}
     }
