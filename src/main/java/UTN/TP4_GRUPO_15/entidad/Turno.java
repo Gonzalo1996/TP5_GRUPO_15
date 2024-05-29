@@ -112,8 +112,8 @@ public class Turno implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "Turno [id_turno=" + id_turno + ", medico=" + medico + ", paciente=" + paciente + ", fecha=" + fecha
-				+ ", hora=" + hora + ", observacion=" + observacion + ", estado=" + estado + "]";
+	    return "Turno: " + id_turno + ", Médico: " + medico.getNombre() + " " + medico.getApellido() + ", Paciente: " + paciente.getNombre() + " " + paciente.getApellido() +
+	           ", Fecha: " + fecha + ", Hora: " + hora + ", Observación: " + observacion + ", Estado: " + estado;
 	}
 	
 	

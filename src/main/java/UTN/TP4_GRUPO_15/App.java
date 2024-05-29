@@ -1,5 +1,6 @@
 package UTN.TP4_GRUPO_15;
 
+import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
@@ -27,7 +28,7 @@ public class App
     {
     	Scanner sc = new Scanner(System.in);
     	
-    	System.out.println( "ABM Medicos" );
+    	System.out.println( "ABM Medicos / Turnos" );
     	System.out.println( "Opcion 1 - Altas" );
     	System.out.println( "Opcion 2 - Modificacion" );
     	System.out.println( "Opcion 3 - Borrado" );
@@ -38,7 +39,7 @@ public class App
     	System.out.println( "Opcion 7 - Listar turnos del médico con legajo 1234" );
     	System.out.println( "Opcion 8 - Listar todos los legajos de los médicos" );
     	System.out.println( "Opcion 9 - Mostrar médico con mayor número de legajo" );
-    	System.out.println( "Opcion 8 - Listar todos los legajos de los médicos" );
+    	System.out.println( "Opcion 10 - Mostrar porcentajes de estados presente y ausente entre 2023-01-01 - 2023-03-01" );
     	System.out.println( "Seleccionar Opcion: " );
     	
     	int opcion = sc.nextInt();
@@ -121,16 +122,16 @@ public class App
     		Paciente paciente10 = new Paciente("Sofía", "Álvarez", "147258369", "1472583690", "Av. 9 de Julio 666", "Otra Ciudad", "Otra Provincia", LocalDate.of(1993, 11, 30), "sofia@example.com");
 
     		// Creación de turnos
-    		Turno turno1 = new Turno(medico01, paciente1, LocalDate.of(2025, 10, 11), LocalTime.of(14, 0), "observación1", "pendiente");
-    		Turno turno2 = new Turno(medico01, paciente2, LocalDate.of(2025, 01, 01), LocalTime.of(14, 0), "observación2", "ausente");
-    		Turno turno3 = new Turno(medico01, paciente3, LocalDate.of(2025, 8, 12), LocalTime.of(14, 0), "observación3", "pendiente");
-    		Turno turno4 = new Turno(medico01, paciente4, LocalDate.of(2025, 01, 01), LocalTime.of(14, 0), "observación4", "pendiente");
-    		Turno turno5 = new Turno(medico05, paciente5, LocalDate.of(2024, 10, 13), LocalTime.of(14, 0), "observación5", "presente");
-    		Turno turno6 = new Turno(medico06, paciente6, LocalDate.of(2024, 8, 13), LocalTime.of(14, 0), "observación6", "pendiente");
-    		Turno turno7 = new Turno(medico07, paciente7, LocalDate.of(2024, 10, 14), LocalTime.of(14, 0), "observación7", "pendiente");
-    		Turno turno8 = new Turno(medico08, paciente8, LocalDate.of(2024, 8, 14), LocalTime.of(14, 0), "observación8", "pendiente");
-    		Turno turno9 = new Turno(medico09, paciente9, LocalDate.of(2024, 10, 15), LocalTime.of(14, 0), "observación9", "ausente");
-    		Turno turno10 = new Turno(medico10, paciente10, LocalDate.of(2024, 8, 15), LocalTime.of(14, 0), "observación10", "pendiente");
+    		Turno turno1 = new Turno(medico01, paciente1, LocalDate.of(2024, 01, 11), LocalTime.of(14, 0), "observación1", "presente");
+    		Turno turno2 = new Turno(medico01, paciente2, LocalDate.of(2024, 01, 01), LocalTime.of(14, 0), "observación2", "ausente");
+    		Turno turno3 = new Turno(medico01, paciente3, LocalDate.of(2024, 02, 12), LocalTime.of(14, 0), "observación3", "ausente");
+    		Turno turno4 = new Turno(medico01, paciente4, LocalDate.of(2024, 01, 01), LocalTime.of(14, 0), "observación4", "ausente");
+    		Turno turno5 = new Turno(medico05, paciente5, LocalDate.of(2024, 02, 13), LocalTime.of(14, 0), "observación5", "presente");
+    		Turno turno6 = new Turno(medico06, paciente6, LocalDate.of(2024, 01, 13), LocalTime.of(14, 0), "observación6", "presente");
+    		Turno turno7 = new Turno(medico07, paciente7, LocalDate.of(2024, 02, 14), LocalTime.of(14, 0), "observación7", "presente");
+    		Turno turno8 = new Turno(medico08, paciente8, LocalDate.of(2024, 01, 14), LocalTime.of(14, 0), "observación8", "presente");
+    		Turno turno9 = new Turno(medico09, paciente9, LocalDate.of(2024, 04, 15), LocalTime.of(14, 0), "observación9", "ausente");
+    		Turno turno10 = new Turno(medico10, paciente10, LocalDate.of(2024, 01, 15), LocalTime.of(14, 0), "observación10", "presente");
 
     		System.out.println(new turnoController().create(turno1));
     		System.out.println(new turnoController().create(turno2));
@@ -196,6 +197,9 @@ public class App
     		break;
     	case 9:
     		new medicoController().listMedicWithHighestId();
+    		break;
+    	case 10:
+        		new turnoController().listTurnStatusPercentages();
     		break;
     	}
     }
